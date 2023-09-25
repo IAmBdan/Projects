@@ -1,0 +1,10 @@
+To make the Flood-it game we have 2 main classes, FloodItWolrd and Cell 
+The FloodItWorld is the central component of a Flood-It game, defining the game world's structure and behavior. 
+It encompasses several main ideas, including the representation of the game board as a 2D array of cells (which is the other class and defines each cell), 
+the tracking of game parameters like board dimensions, available colors, and guesses, and the management of game state through 
+methods for handling user interactions, game ticks, and end conditions. 
+The FloodItWorld class also handles graphical elements, such as rendering the game board and displaying the score and timer. 
+It offers various constructors to initialize the game world with different configurations and provides methods for determining win/loss conditions, 
+resetting the game, and changing cell colors for testing. Overall, 
+FloodItWorld encapsulates the essential components required to create and interact with a Flood-It game in a structured and modular manner.
+We then have ExamplesFloodIt which holds all the tests for aboth classes.
