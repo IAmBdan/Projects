@@ -1,0 +1,38 @@
+Written in the function based Racket programming language the program is designed to implement a simple word-guessing game similar to Wordle. 
+Here is a description of how the program works and its main ideas:
+
+The program defines various data structures, constants, and functions to create a word-guessing game. 
+Here are the main ideas and components of the program:
+
+Data Structures: The program defines several data structures, including pair, LetterStatus, LetterStatusPair, and VizPair, 
+which are used to represent pairs of values and letter status.
+
+Constants: There are constants defined for various visual elements of the game, such as background colors, letter sizes, 
+and gap sizes between game objects.
+
+Functions for General Use: The program defines utility functions like mymap2 for applying a function to elements from two lists in parallel.
+
+Functions for Visualizing Letters: It defines functions for visualizing letters and scored letters. These functions handle the 
+graphical representation of letters and their status in the game.
+
+Functions for Arranging Images: Functions like stack, stack/v, and stack/h are used to arrange a list of images either vertically or horizontally.
+
+Functions for Handling User Input: The program defines functions like key-wordle, return-helper, letter-helper, and backspace-helper 
+to handle user keyboard input. These functions update the game state based on user actions.
+
+Word Scoring: The score function takes two strings, a guessed word, and the correct word, and returns a list of LetterStatusPair 
+indicating which letters are correct, misplaced, or wrong in the guessed word.
+
+Wordle State: The program defines a wordle structure to represent the game state, which includes the current and past guesses.
+
+End of Game: The end-wordle? function checks if the game has ended, either because the correct word has been guessed or the maximum 
+number of guesses has been reached.
+
+Drawing the End Screen: The draw-end-wordle function is used to draw the end screen of the game, indicating whether the player has won or lost.
+
+Overall, the program provides the framework for a simple word-guessing game where the player can input letters, see their guesses visualized,
+and determine if they have won or lost the game based on the correct word and maximum number of guesses allowed.
+
+
+
+
