@@ -1,14 +1,14 @@
 Goal: Create a marble solitaire game using a builder pattern and MVC design pattern to create and implement a working interactable marble solitaire 
 game needed to create three different versions of the game, the (English) regular version, a European version (a circular board), and a triangular 
 board. The game also needs to be able to use a gui and text to display the board and must be able to take in inputs from a click (on the gui board), a
-file containing moves and user inputted text.
+file containing moves and user-inputted text.
 
 First started by creating the model 
 
 The main method takes command-line arguments (args) to specify the type of Marble Solitaire game to play, the board size,
 and the position of a hole (optional).
 
-Supported game types are "triangular," "european," and "english."
+Supported game types are "triangular," "European," and "English."
 The optional arguments are "-size" followed by the board size (an integer) and "-hole" followed by the coordinates of the hole (two integers).
 Initialization:
 
@@ -17,7 +17,7 @@ Game Selection:
 
 The code uses a switch statement based on the specified board type to initialize the appropriate SolitaireModelTemp model, 
 MarbleSolitaireTextView viewer, and MarbleSolitaireControllerImpl controller.
-It supports three types of Marble Solitaire games: "triangular," "european," and "english."
+It supports three types of Marble Solitaire games: "triangular," "european," and "English."
 Model Initialization:
 
 Depending on the provided command-line arguments, the code initializes the model for the selected game type. 
