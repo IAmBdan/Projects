@@ -7,7 +7,7 @@ The program defines various data structures, constants, and functions to create 
 Here are the main ideas and components of the program:
 
 Data Structures: The program defines several data structures, including pair, LetterStatus, LetterStatusPair, and VizPair, 
-which are used to represent pairs of values and letter status.
+which are used to represent pairs of values and letter status. 
 
 Constants: There are constants defined for various visual elements of the game, such as background colors, letter sizes, 
 and gap sizes between game objects.
