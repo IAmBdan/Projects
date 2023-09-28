@@ -1,0 +1,54 @@
+Goal: Create a maze that can be solved using breath or depth-first search  
+
+I used Java to create and visualize mazes. It utilizes the Java library javalib.impworld for creating graphical worlds and scenes. 
+Here's an overview of the code structure and what it does:
+
+Maze Class: This is the main class representing the maze and extends the World class from java lib.impworld. 
+
+The Maze class has several fields and methods to create, visualize, and search mazes.
+
+Fields:
+
+width and height: Dimensions of the maze.
+cellSize: Size of each cell in the maze.
+vertexMap: A 2D ArrayList of vertices representing the maze grid.
+edges: An ArrayList of edges representing potential connections between vertices.
+viableEdges: An ArrayList of edges that form the maze itself after filtering using Kruskal's algorithm.
+represent: A HashMap used in union-find operations.
+rand: A random number generator.
+
+As well as Various other fields to keep track of pathfinding statistics and user interactions.
+
+Constructors:
+
+There are two constructors for creating a maze, one with a random seed and another without.
+
+Methods:
+
+initMap(): Initializes the vertices of the maze.
+initEdges(): Initializes the edges between vertices.
+makeScene(): Creates and updates the graphical representation of the maze.
+kruskalsAlgorithm(): Applies Kruskal's algorithm to find viable maze edges.
+assignVertexEdges(): Assigns edges to vertices.
+searchTree(): Performs depth-first or breadth-first search to find paths through the maze.
+reconstruct(): Reconstructs the minimal path.
+onTick(): Updates the visualization of the maze during animation.
+onKeyEvent(): Handles user input to trigger actions like search, maze generation, and visualization toggles.
+WeightCheck Class: This is a comparator class used to compare the weights of edges when sorting them.
+
+Instructions Class: This class represents an instruction screen for the maze game, displaying information about the available keys 
+and their functions.
+
+Overall, this code creates a maze and allows users to perform various actions, including solving the maze using depth-first or 
+breadth-first search algorithms, generating new random mazes, and toggling the visibility of visited paths. 
+It's a maze-solving and visualization program with interactive features.
+
+
+
+
+
+
+
+
+
+
