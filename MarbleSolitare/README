@@ -1,0 +1,57 @@
+Goal: Create a marble solitaire game using a builder pattern and MVC design pattern to create and implement a working interactable marble solitaire 
+game needed to create three different versions of the game, the (English) regular version, a European version (a circular board), and a triangular 
+board. The game also needs to be able to use a gui and text to display the board and must be able to take in inputs from a click (on the gui board), a
+file containing moves and user inputted text.
+
+First started by creating the model 
+
+The main method takes command-line arguments (args) to specify the type of Marble Solitaire game to play, the board size,
+and the position of a hole (optional).
+
+Supported game types are "triangular," "european," and "english."
+The optional arguments are "-size" followed by the board size (an integer) and "-hole" followed by the coordinates of the hole (two integers).
+Initialization:
+
+The code initializes variables for Readable (input), Appendable (output), and other variables needed for the game.
+Game Selection:
+
+The code uses a switch statement based on the specified board type to initialize the appropriate SolitaireModelTemp model, 
+MarbleSolitaireTextView viewer, and MarbleSolitaireControllerImpl controller.
+It supports three types of Marble Solitaire games: "triangular," "european," and "english."
+Model Initialization:
+
+Depending on the provided command-line arguments, the code initializes the model for the selected game type. 
+It uses the specified board size and hole coordinates if provided; otherwise, it uses default values.
+View and Controller Initialization:
+
+The code initializes the appropriate text-based view (MarbleSolitaireTextView or TriangleSolitaireTextView) and the controller 
+(MarbleSolitaireControllerImpl) for the selected game type and model.
+
+Game Execution:
+
+The controller's playGame method is called to start and run the game. The game logic is executed here, including player moves and game state updates.
+
+Error Handling:
+
+The code performs basic error checking, such as ensuring that valid board types are provided and handling different combinations of size 
+and hole arguments.
+
+I then created a GUI which is responsible for controlling a graphical user interface (GUI) version of the Marble Solitaire game. 
+The class implements the ControllerFeatures interface, suggesting that it interacts with the GUI view and the Marble Solitaire model.
+
+The primary purpose of this GUIController class is to facilitate communication between the GUI view and the Marble Solitaire model. 
+It tracks player moves, validates input, and updates the view accordingly. It also handles scenarios where the player completes a move, 
+and the game may be won or lost.
+
+To complete the MVC pattern we have the view which can either display the game as text or as an image using the gui driver. This class is where all 
+the construction of the board is and how to display it. In the class is also the code which will update the board when the player makes a move.
+
+All of these come together to create a marble game with three different modes, 2 different displaying modes, and 3 different ways to input moves
+
+
+
+
+
+
+
+
