@@ -1,3 +1,5 @@
+Goal: Create a worlde type game using different types of lists and recursion
+
 Written in the function based Racket programming language the program is designed to implement a simple word-guessing game similar to Wordle. 
 Here is a description of how the program works and its main ideas:
 
