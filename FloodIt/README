@@ -1,9 +1,15 @@
+Goal: To make a Flood-it game using spanning trees and 2d array lists
+
 To make the Flood-it game we have 2 main classes, FloodItWolrd and Cell 
 The FloodItWorld is the central component of a Flood-It game, defining the game world's structure and behavior.
+Flood-It is a puzzle game where the player's objective is to fill the entire game board with a single color within a limited number of moves (guesses).
+The game board consists of a grid of colored cells. Players start at the top-left corner of the grid and select a color. 
+All cells of the same color that are adjacent to the starting cell (vertically or horizontally) become part of the player's territory.
+The game continues until the player either conquers the entire board or runs out of allowed guesses.
 
-It encompasses several main ideas, including the representation of the game board as a 2D array of cells (which is the other class and defines each cell), 
-the tracking of game parameters like board dimensions, available colors, and guesses, and the management of game state through 
-methods for handling user interactions, game ticks, and end conditions. 
+It encompasses several main ideas, including the representation of the game board as a 2D array of cells 
+(which is the other class and defines each cell), the tracking of game parameters like board dimensions, available colors, 
+and guesses, and the management of the game state through methods for handling user interactions, game ticks, and end conditions. 
 
 The FloodItWorld class also handles graphical elements, such as rendering the game board and displaying the score and timer. 
 
@@ -11,4 +17,45 @@ It offers various constructors to initialize the game world with different confi
 resetting the game, and changing cell colors for testing. 
 FloodItWorld encapsulates the essential components required to create and interact with a Flood-It game in a structured and modular manner.
 
-We then have ExamplesFloodIt which holds all the tests for both classes.
+Here's an explanation of what this code does and the structure of the Flood-It game it creates:
+
+Game Overview:
+
+The game is implemented as a FloodItWorld class, which extends the World class, suggesting that it's designed to be run using the World framework.
+Fields in FloodItWorld Class:
+
+board: Represents the game board as a 2D grid of cells.
+width and height: Define the dimensions of the game board.
+numColors: Specifies the number of different colors used on the board.
+rand: An instance of Random used for generating random colors.
+topLeft: Stores the color of the top-left cell on the board.
+drawList: A list of cells that need to be drawn on the screen.
+floodedCells: A list of cells that are flooded (belong to the player's territory).
+sum: A value used to determine the diagonal row on which the player is.
+guessesSoFar: Keeps track of the number of guesses made by the player.
+guessesAllowed: Represents the maximum allowed guesses in the game.
+theGameIsOver: A boolean indicating if the game is over.
+win: A boolean indicating if the player won the game.
+timer: Tracks the time elapsed since the beginning of the game.
+Constructors:
+
+The class provides several constructors to initialize the game with different parameters, including board dimensions and the number of colors. There are also constructors that allow for a seeded random generator for testing purposes.
+Gameplay Logic:
+
+The onMouseClicked method handles player input when a cell is clicked. It changes the color of the top-left cell and increments the guess counter.
+The onTick method updates the game state over time. It updates the list of cells to draw, determines which cells are flooded based on the selected color, checks if the game is over, and updates the timer.
+The game ends when the player either conquers the entire board (all cells have the same color) or exceeds the maximum allowed guesses.
+Drawing and Visualization:
+
+The game is displayed using the World framework, and it uses methods like makeScene to create the graphical representation of the game board.
+The drawBoard method generates an image of the game board by combining individual cell images.
+The drawScore method displays the number of guesses made.
+The drawTimer method displays the elapsed time since the start of the game.
+The game provides visual feedback to the player through these images and displays the result (win or lose) at the end.
+Keyboard Input:
+
+The onKeyEvent method allows the player to reset the game by pressing the 'r' key. It restores the board to its initial state.
+Overall, the code defines the structure and logic for a Flood-It game, where players try to fill the entire board with a single color while managing their guess count and time. The game provides feedback through visual elements and ends when the player either wins or loses.
+
+Then we have the examples class which holds tests for all three classes and tests to make sure everything works properly.
+
