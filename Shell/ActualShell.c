@@ -2,7 +2,7 @@
  * file:        shell3650.c
  * description: skeleton code for a simple shell
  *
- * Peter Desnoyers, Northeastern Fall 2023
+ * 
  */
 
 /* <> means don't check the local directory */
