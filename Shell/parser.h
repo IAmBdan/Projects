@@ -2,7 +2,7 @@
  * file:        parser.c
  * description: skeleton code for simple shell
  *
- * Peter Desnoyers, Northeastern Fall 2023
+
  */
 
 /* standard include file protection:
