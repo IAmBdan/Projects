@@ -2,7 +2,7 @@
  * file:        parser.c
  * description: skeleton code for a simple shell
  *
- * Peter Desnoyers, Northeastern Fall 2023
+ * 
  */
 
 #include <stdio.h>
